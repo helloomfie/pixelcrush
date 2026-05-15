@@ -178,19 +178,21 @@ function PixelHeart({ rainbow = false }) {
   );
 }
 
-function CoupleCard({ a, b, rainbow = false }) {
+function CoupleCard({
+  image,
+}: {
+  image: string;
+}) {
   return (
-    <motion.div whileHover={{ y: -5, scale: 1.02 }} className="rounded-[2rem] border border-white/25 bg-white/15 p-5 shadow-xl backdrop-blur">
-      <PixelHeart rainbow={rainbow} />
-      <div className="mt-2 flex items-end justify-center gap-3">
-        {[a, b].map((person, index) => (
-          <div key={person} className="flex flex-col items-center">
-            <div className={`h-12 w-12 rounded-t-2xl border-4 border-[#2a2230] ${index === 0 ? "bg-amber-700" : "bg-orange-400"}`} />
-            <div className={`h-16 w-12 border-x-4 border-b-4 border-[#2a2230] ${index === 0 ? "bg-lime-500" : "bg-red-500"}`} />
-            <p className="mt-2 text-xs font-bold text-white/90">{person}</p>
-          </div>
-        ))}
-      </div>
+    <motion.div
+      whileHover={{ y: -5, scale: 1.02 }}
+      className="rounded-[2rem] border border-white/25 bg-white/15 p-5 shadow-xl backdrop-blur"
+    >
+      <img
+        src={image}
+        alt="pixelcrush couple"
+        className="mx-auto h-44 w-auto object-contain pixelated"
+      />
     </motion.div>
   );
 }
@@ -249,6 +251,8 @@ function Info({ label, value }) {
 }
 
 export default function PixelCrushApp() {
+  
+  
   const [query, setQuery] = useState("");
   const [selectedId, setSelectedId] = useState("PC001");
 
@@ -259,7 +263,7 @@ export default function PixelCrushApp() {
   }, [query]);
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-[#8997ff] via-[#766cdc] to-[#8d59c7] text-white">
+    <main className="min-h-screen bg-gradient-to-br from-[#8997ff] via-[#766cdc] to-[#8d59c7] text-white pixelated">
       <nav className="sticky top-0 z-20 border-b border-white/10 bg-[#8191f5]/80 px-6 py-5 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between">
           <div className="flex items-center gap-3">
@@ -283,11 +287,18 @@ export default function PixelCrushApp() {
             <div className="rounded-3xl border border-white/25 bg-white/15 p-5 text-center"><Users className="mx-auto h-12 w-12" /><p className="mt-2 font-black">Finally Meet</p></div>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-4">
-          <CoupleCard a="James" b="Rachel" />
-          <CoupleCard a="Alex" b="Mia" />
-          <CoupleCard a="Noah" b="Kai" rainbow />
-          <CoupleCard a="Lena" b="Zoe" rainbow />
+        <div className="grid grid-cols-2 gap-4 lg:grid-cols-3">
+          {[
+            "/images/couple1.png",
+            "/images/couple2.png",
+            "/images/couple3.png",
+            "/images/couple4.png",
+            "/images/couple5.png",
+            "/images/couple6.png",
+            "/images/couple7.png",
+          ].map((image) => (
+            <CoupleCard key={image} image={image} />
+          ))}
         </div>
       </section>
 
