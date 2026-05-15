@@ -1,65 +1,116 @@
 # pixelcrush ♡
 
-a private matchmaking system built around compatibility, comfort and intimacy.
+privacy-first matchmaking infrastructure for intentional relationships.
+
+pixelcrush is an experimental matchmaking platform + operator dashboard focused on progressive intimacy, human-guided compatibility and structured relationship workflows.
+
+built around the idea that modern dating platforms optimize for engagement loops instead of actual connection.
 
 no swiping.  
-no public profiles.  
-no rejection spirals.  
+no public feeds.  
+no algorithmic addiction mechanics.  
 
 just real people, real chemistry and real matchmakers.
 
 ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡
 
-*what is pixelcrush?*
+## system overview
 
-pixelcrush is a matchmaking platform + internal crm designed to help people connect in a slower, more intentional way.
+pixelcrush combines:
 
-instead of endless browsing, users are guided through:
+- matchmaking crm
+- user relationship graphing
+- compatibility profiling
+- session scheduling
+- progressive communication states
+- private onboarding flows
+- matchmaker assisted routing
 
-- anonymous matching
-- audio first introductions
-- optional video calls
-- in person meetings
-- long term relationship support
+the platform is designed around guided progression:
 
-♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡
+```txt
+audio → video → in person
 
-*current stack*
-
-- next.js
-- react
-- tailwindcss
-- typescript
-
-future:
-- supabase
-- calendar integrations
-- video/audio scheduling
-- matchmaking analytics
-- private user portals
+instead of instant exposure and endless profile browsing.
 
 ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡
 
-*current features*
+architecture
+frontend
+├── next.js app router
+├── react
+├── tailwindcss
+└── framer motion
 
-- matchmaker dashboard
-- user database
-- compatibility profiles
-- scheduling system
-- session tracking
-- matchmaking workflow states
-- pixel art pfps!
+data layer
+├── local structured datasets
+├── spreadsheet ingestion
+└── future supabase migration
+
+planned infrastructure
+├── auth
+├── realtime messaging
+├── scheduling engine
+├── analytics
+├── profile state machines
+└── relationship lifecycle tracking
 
 ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡
 
-*philosophy*
+current modules
+matchmaking dashboard
 
-personality before appearance.  
-privacy before performance.  
+internal operator interface for managing clients, matches and progression states.
+
+compatibility profiles
+
+stores lifestyle preferences, relationship goals, personality metrics and communication styles.
+
+scheduling workflow
+
+tracks audio calls, video sessions, follow-ups and matchmaker notes.
+
+progressive intimacy model
+
+users unlock deeper interaction layers gradually instead of immediate exposure.
+
+relationship state tracking
+
+tracks progression from onboarding → active matching → sessions → relationship outcomes.
+
+♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡
+
+development
+npm install
+npm run dev
+
+local development server:
+
+http://localhost:3000
+
+♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡
+
+roadmap
+supabase migration
+relational database schema
+authentication layer
+calendar integrations
+automated scheduling
+operator analytics
+onboarding pipelines
+realtime messaging
+user portals
+compatibility scoring engine
+
+♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡
+
+philosophy
+
+personality before appearance.
+privacy before performance.
 connection before algorithms.
+human guidance before automation.
 
 ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡
 
-*made with love*
-
-
+made with love
