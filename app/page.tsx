@@ -197,7 +197,13 @@ function CoupleCard({
   );
 }
 
-function Stat({ label, value }) {
+function Stat({
+  label,
+  value,
+}: {
+  label: string;
+  value: string | number;
+}) {
   return (
     <div className="rounded-3xl border border-white/20 bg-white/15 p-4 text-center shadow-lg backdrop-blur">
       <p className="text-3xl font-black text-white">{value}</p>
@@ -241,7 +247,13 @@ function ClientProfile({ user }) {
   );
 }
 
-function Info({ label, value }) {
+function Info({
+  label,
+  value,
+}: {
+  label: string;
+  value: string;
+}) {
   return (
     <div className="rounded-2xl bg-[#f7f4ff] p-3">
       <p className="text-[10px] font-black uppercase tracking-widest text-[#8c7fc4]">{label}</p>
