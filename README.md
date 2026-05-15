@@ -1,14 +1,14 @@
 # pixelcrush ♡
 
-a private matchmaking system built around compatibility, comfort, and progressive intimacy.
+a private matchmaking system built around compatibility, comfort and intimacy.
 
 no swiping.  
 no public profiles.  
 no rejection spirals.  
 
-just real people, real chemistry, and real matchmakers.
+just real people, real chemistry and real matchmakers.
 
----
+♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡
 
 ## what is pixelcrush?
 
@@ -22,7 +22,7 @@ instead of endless browsing, users are guided through:
 - in-person meetings
 - long-term relationship support
 
----
+♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡
 
 ## current stack
 
@@ -38,7 +38,7 @@ future:
 - matchmaking analytics
 - private user portals
 
----
+♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡
 
 ## current features
 
@@ -50,7 +50,7 @@ future:
 - matchmaking workflow states
 - pixel-art couples
 
----
+♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡
 
 ## philosophy
 
@@ -58,7 +58,7 @@ personality before appearance.
 privacy before performance.  
 connection before algorithms.
 
----
+♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡
 
 ## local setup
 
