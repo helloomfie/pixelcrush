@@ -48,7 +48,7 @@ future:
 - scheduling system
 - session tracking
 - matchmaking workflow states
-- pixel-art couples
+- pixel art pfps!
 
 ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡
 
