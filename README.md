@@ -10,7 +10,7 @@ just real people, real chemistry and real matchmakers.
 
 ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡
 
-what is pixelcrush?
+#what is pixelcrush?
 
 pixelcrush is a matchmaking platform + internal crm designed to help people connect in a slower, more intentional way.
 
