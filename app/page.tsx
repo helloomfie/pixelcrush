@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useMemo, useState } from "react";
 import { Heart, Lock, Headphones, Video, Users, Calendar, Search, Sparkles, CheckCircle2, UserRound, MessageCircleHeart } from "lucide-react";
 import { motion } from "framer-motion";
@@ -154,7 +152,7 @@ const waitlist = [
 
 const features = [
   [Lock, "Complete Privacy", "No browsing profiles. No public photos. Nobody sees you until you're ready."],
-  [UserRound, "Personal Matchmaker", "A real person learns your preferences, handles rejections, and guides the process."],
+  [UserRound, "Personal matchmaker", "A real person learns your preferences, handles rejections, and guides the process."],
   [Headphones, "Progressive Intimacy", "Start with audio, progress to video, then meet when both people are comfortable."],
   [MessageCircleHeart, "Rejection-Free Zone", "Your matchmaker delivers the news and finds better matches without direct rejection."],
   [Sparkles, "Smart Compatibility", "Private quizzes help your matchmaker find real compatibility, not just attractive faces."],
@@ -162,11 +160,11 @@ const features = [
 ];
 
 const howItWorks = [
-  ["1", "Join & Quiz", "Complete the compatibility assessment and get matched with your personal matchmaker."],
-  ["2", "Get Matched", "Your matchmaker finds compatible people and arranges anonymous audio calls."],
-  ["3", "Audio Dates", "Voice-only calls help you notice personality before visual distraction."],
-  ["4", "Progress Naturally", "When both people are ready, add video, then meet in person."],
-  ["5", "Close the Deal", "Archive your profile and start your relationship with ongoing support."],
+  ["1", "join & quiz", "Complete the compatibility assessment and get matched with your personal matchmaker."],
+  ["2", "get matched", "Your matchmaker finds compatible people and arranges anonymous audio calls."],
+  ["3", "audio dates", "Voice-only calls help you notice personality before visual distraction."],
+  ["4", "progress naturally", "When both people are ready, add video, then meet in person."],
+  ["5", "close the deal", "Archive your profile and start your relationship with ongoing support."],
 ];
 
 function PixelHeart({ rainbow = false }) {
@@ -197,13 +195,7 @@ function CoupleCard({
   );
 }
 
-function Stat({
-  label,
-  value,
-}: {
-  label: string;
-  value: string | number;
-}) {
+function Stat({ label, value }) {
   return (
     <div className="rounded-3xl border border-white/20 bg-white/15 p-4 text-center shadow-lg backdrop-blur">
       <p className="text-3xl font-black text-white">{value}</p>
@@ -212,11 +204,7 @@ function Stat({
   );
 }
 
-function Badge({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+function Badge({ children }) {
   return <span className="rounded-full bg-white/20 px-3 py-1 text-xs font-bold text-white ring-1 ring-white/20">{children}</span>;
 }
 
@@ -235,12 +223,12 @@ function ClientProfile({ user }) {
       </div>
       <p className="mt-4 rounded-2xl bg-[#f3efff] p-4 text-sm font-semibold leading-6">{pref.description}</p>
       <div className="mt-4 grid grid-cols-2 gap-3 text-sm">
-        <Info label="Goal" value={pref.goals} />
-        <Info label="Looking For" value={pref.lookingFor} />
-        <Info label="Religion" value={pref.religion} />
-        <Info label="Lifestyle" value={pref.lifestyle} />
-        <Info label="Love Language" value={adv.loveLanguage} />
-        <Info label="Pace" value={adv.pace} />
+        <Info label="goal" value={pref.goals} />
+        <Info label="looking for" value={pref.lookingFor} />
+        <Info label="religion" value={pref.religion} />
+        <Info label="lifestyle" value={pref.lifestyle} />
+        <Info label="love language" value={adv.loveLanguage} />
+        <Info label="pace" value={adv.pace} />
       </div>
       <div className="mt-4 flex flex-wrap gap-2">
         <Badge>{user.subscription}</Badge>
@@ -251,13 +239,7 @@ function ClientProfile({ user }) {
   );
 }
 
-function Info({
-  label,
-  value,
-}: {
-  label: string;
-  value: string;
-}) {
+function Info({ label, value }) {
   return (
     <div className="rounded-2xl bg-[#f7f4ff] p-3">
       <p className="text-[10px] font-black uppercase tracking-widest text-[#8c7fc4]">{label}</p>
@@ -279,12 +261,12 @@ export default function PixelCrushApp() {
   }, [query]);
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-[#8997ff] via-[#766cdc] to-[#8d59c7] text-white pixelated">
+    <main className="min-h-screen lowercase bg-gradient-to-br from-[#8997ff] via-[#766cdc] to-[#8d59c7] text-white pixelated">
       <nav className="sticky top-0 z-20 border-b border-white/10 bg-[#8191f5]/80 px-6 py-5 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="grid h-11 w-11 place-items-center rounded-2xl bg-[#ff4658] shadow-lg"><Heart fill="white" className="h-6 w-6" /></div>
-            <h1 className="text-3xl font-black tracking-tight drop-shadow-md">PixelCrush</h1>
+            <h1 className="text-3xl font-black tracking-tight drop-shadow-md">pixelcrush</h1>
           </div>
           <div className="hidden gap-2 md:flex">
             <Badge>no swiping</Badge><Badge>audio first</Badge><Badge>private</Badge>
@@ -295,12 +277,12 @@ export default function PixelCrushApp() {
       <section className="mx-auto grid max-w-7xl gap-10 px-6 py-16 lg:grid-cols-[1.1fr_.9fr] lg:items-center">
         <div>
           <motion.p initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="text-sm font-black uppercase tracking-[0.3em] text-white/70">dating, reimagined</motion.p>
-          <motion.h2 initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.05 }} className="mt-4 max-w-3xl text-6xl font-black leading-[0.95] drop-shadow-lg md:text-7xl">No swiping. No anxiety. Just real connections.</motion.h2>
-          <p className="mt-6 max-w-2xl text-xl font-semibold leading-9 text-white/85">Your personal matchmaker handles everything from introductions to rejections. Progressive intimacy, complete privacy, and hand-holding until you find your person.</p>
+          <motion.h2 initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.05 }} className="mt-4 max-w-3xl text-6xl font-black leading-[0.95] drop-shadow-lg md:text-7xl">no swiping. no anxiety. just real connections.</motion.h2>
+          <p className="mt-6 max-w-2xl text-xl font-semibold leading-9 text-white/85">your personal matchmaker handles everything from introductions to rejections. progressive intimacy, complete privacy, and hand-holding until you find your person.</p>
           <div className="mt-8 grid max-w-xl grid-cols-3 gap-4">
-            <div className="rounded-3xl border border-white/25 bg-white/15 p-5 text-center"><Heart fill="#ff4658" className="mx-auto h-12 w-12 text-[#ff4658]" /><p className="mt-2 font-black">Audio First</p></div>
-            <div className="rounded-3xl border border-white/25 bg-white/15 p-5 text-center"><Video className="mx-auto h-12 w-12" /><p className="mt-2 font-black">Then Video</p></div>
-            <div className="rounded-3xl border border-white/25 bg-white/15 p-5 text-center"><Users className="mx-auto h-12 w-12" /><p className="mt-2 font-black">Finally Meet</p></div>
+            <div className="rounded-3xl border border-white/25 bg-white/15 p-5 text-center"><Heart fill="#ff4658" className="mx-auto h-12 w-12 text-[#ff4658]" /><p className="mt-2 font-black">audio first</p></div>
+            <div className="rounded-3xl border border-white/25 bg-white/15 p-5 text-center"><Video className="mx-auto h-12 w-12" /><p className="mt-2 font-black">then video</p></div>
+            <div className="rounded-3xl border border-white/25 bg-white/15 p-5 text-center"><Users className="mx-auto h-12 w-12" /><p className="mt-2 font-black">finally meet</p></div>
           </div>
         </div>
         <div className="grid grid-cols-2 gap-4 lg:grid-cols-3">
@@ -312,8 +294,6 @@ export default function PixelCrushApp() {
             "/images/couple5.png",
             "/images/couple6.png",
             "/images/couple7.png",
-            "/images/couple8.png",
-            "/images/couple9.png",
           ].map((image) => (
             <CoupleCard key={image} image={image} />
           ))}
@@ -332,7 +312,7 @@ export default function PixelCrushApp() {
       <section className="mx-auto grid max-w-7xl gap-6 px-6 py-10 lg:grid-cols-[.9fr_1.1fr]">
         <div className="rounded-[2rem] border border-white/20 bg-white/15 p-5 shadow-2xl backdrop-blur">
           <div className="flex items-center justify-between gap-4">
-            <h2 className="text-3xl font-black">Matchmaker Dashboard</h2>
+            <h2 className="text-3xl font-black">matchmaker dashboard</h2>
             <Search className="h-6 w-6 text-white/70" />
           </div>
           <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="search clients..." className="mt-5 w-full rounded-2xl border border-white/20 bg-white/20 px-4 py-3 font-bold text-white placeholder:text-white/55 outline-none" />
@@ -354,7 +334,7 @@ export default function PixelCrushApp() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-10">
-        <h2 className="text-center text-5xl font-black">Why PixelCrush Works</h2>
+        <h2 className="text-center text-5xl font-black">why pixelcrush works</h2>
         <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {features.map(([Icon, title, desc]) => (
             <div key={title} className="rounded-[2rem] bg-gradient-to-br from-[#ec7ed0] to-[#ff536f] p-6 shadow-xl">
@@ -367,7 +347,7 @@ export default function PixelCrushApp() {
       </section>
 
       <section className="mx-auto max-w-4xl px-6 py-14">
-        <h2 className="text-center text-5xl font-black">How It Works</h2>
+        <h2 className="text-center text-5xl font-black">how it works</h2>
         <div className="mt-8 space-y-5">
           {howItWorks.map(([num, title, desc]) => (
             <div key={num} className="rounded-[2rem] border border-white/20 bg-white/15 p-6 text-center shadow-xl backdrop-blur">
@@ -382,17 +362,17 @@ export default function PixelCrushApp() {
       <section className="mx-auto max-w-7xl px-6 py-10 pb-20">
         <div className="grid gap-5 lg:grid-cols-3">
           <div className="rounded-[2rem] bg-white p-5 text-[#30244d] shadow-2xl">
-            <h3 className="text-2xl font-black">Current Match</h3>
+            <h3 className="text-2xl font-black">current match</h3>
             <p className="mt-2 font-bold text-[#6a5d83]">{matches[0].id} · {matches[0].status}</p>
             <p className="mt-4 rounded-2xl bg-[#f3efff] p-4 font-semibold">{matches[0].notes}</p>
           </div>
           <div className="rounded-[2rem] bg-white p-5 text-[#30244d] shadow-2xl">
-            <h3 className="text-2xl font-black">Next Session</h3>
+            <h3 className="text-2xl font-black">next session</h3>
             <p className="mt-2 font-bold text-[#6a5d83]">{sessions[0].type} · {sessions[0].duration}</p>
             <p className="mt-4 rounded-2xl bg-[#f3efff] p-4 font-semibold">{sessions[0].nextAction}</p>
           </div>
           <div className="rounded-[2rem] bg-white p-5 text-[#30244d] shadow-2xl">
-            <h3 className="text-2xl font-black">Matchmaker</h3>
+            <h3 className="text-2xl font-black">matchmaker</h3>
             <p className="mt-2 font-bold text-[#6a5d83]">{matchmakers[0].name}</p>
             <p className="mt-4 rounded-2xl bg-[#f3efff] p-4 font-semibold">{matchmakers[0].activeClients}/{matchmakers[0].capacity} clients · {matchmakers[0].successRate}% success</p>
           </div>
