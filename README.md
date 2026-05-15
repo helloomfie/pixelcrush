@@ -60,8 +60,8 @@ connection before algorithms.
 
 ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡
 
-## local setup
+made with love 
 
-```bash
-npm install
-npm run dev
+♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡
+
+
