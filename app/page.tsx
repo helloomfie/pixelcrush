@@ -289,7 +289,7 @@ export default function PixelCrushApp() {
             <h1 className="text-3xl font-black tracking-tight drop-shadow-md">pixelcrush</h1>
           </div>
           <div className="hidden gap-2 md:flex">
-            <Badge>no swiping</Badge><Badge>Audio First</Badge><Badge>private</Badge>
+            <Badge>no swiping</Badge><Badge>audio first</Badge><Badge>private</Badge>
           </div>
         </div>
       </nav>
