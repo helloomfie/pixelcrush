@@ -17,10 +17,10 @@ pixelcrush is a matchmaking platform + internal crm designed to help people conn
 instead of endless browsing, users are guided through:
 
 - anonymous matching
-- audio-first introductions
+- audio first introductions
 - optional video calls
-- in-person meetings
-- long-term relationship support
+- in person meetings
+- long term relationship support
 
 ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡
 
