@@ -10,7 +10,7 @@ just real people, real chemistry and real matchmakers.
 
 ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡
 
-## what is pixelcrush?
+what is pixelcrush?
 
 pixelcrush is a matchmaking platform + internal crm designed to help people connect in a slower, more intentional way.
 
@@ -24,7 +24,7 @@ instead of endless browsing, users are guided through:
 
 ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡
 
-## current stack
+current stack
 
 - next.js
 - react
@@ -40,7 +40,7 @@ future:
 
 ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡
 
-## current features
+current features
 
 - matchmaker dashboard
 - user database
@@ -52,7 +52,7 @@ future:
 
 ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡
 
-## philosophy
+philosophy
 
 personality before appearance.  
 privacy before performance.  
@@ -61,7 +61,5 @@ connection before algorithms.
 ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡
 
 made with love 
-
-♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡
 
 
