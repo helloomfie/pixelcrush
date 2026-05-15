@@ -4,6 +4,8 @@ import React, { useMemo, useState } from "react";
 import { Heart, Lock, Headphones, Video, Users, Calendar, Search, Sparkles, CheckCircle2, UserRound, MessageCircleHeart } from "lucide-react";
 import { motion } from "framer-motion";
 
+type feature = [React.ElementType, string, string];
+
 const users = [
   {
     id: "PC001",
@@ -152,7 +154,7 @@ const waitlist = [
   },
 ];
 
-const features = [
+const features: feature[] = [
   [Lock, "Complete Privacy", "No browsing profiles. No public photos. Nobody sees you until you're ready."],
   [UserRound, "Personal matchmaker", "A real person learns your preferences, handles rejections, and guides the process."],
   [Headphones, "Progressive Intimacy", "Start with audio, progress to video, then meet when both people are comfortable."],
@@ -197,7 +199,13 @@ function CoupleCard({
   );
 }
 
-function Stat({ label, value }) {
+function Stat({
+  label,
+  value,
+}: {
+  label: string;
+  value: string | number;
+}) {
   return (
     <div className="rounded-3xl border border-white/20 bg-white/15 p-4 text-center shadow-lg backdrop-blur">
       <p className="text-3xl font-black text-white">{value}</p>
@@ -206,13 +214,26 @@ function Stat({ label, value }) {
   );
 }
 
-function Badge({ children }) {
-  return <span className="rounded-full bg-white/20 px-3 py-1 text-xs font-bold text-white ring-1 ring-white/20">{children}</span>;
+function Badge({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <span className="rounded-full bg-white/20 px-3 py-1 text-xs font-bold text-white ring-1 ring-white/20">
+      {children}
+    </span>
+  );
 }
 
-function ClientProfile({ user }) {
-  const pref = preferences[user.id];
-  const adv = advanced[user.id];
+
+function ClientProfile({
+  user,
+}: {
+  user: (typeof users)[number];
+}) {
+const pref = preferences[user.id as keyof typeof preferences];
+const adv = advanced[user.id as keyof typeof advanced];
   return (
     <div className="rounded-[2rem] bg-white p-5 text-[#30244d] shadow-2xl">
       <div className="flex items-start justify-between gap-4">
@@ -241,10 +262,18 @@ function ClientProfile({ user }) {
   );
 }
 
-function Info({ label, value }) {
+function Info({
+  label,
+  value,
+}: {
+  label: string;
+  value: string;
+}) {
   return (
     <div className="rounded-2xl bg-[#f7f4ff] p-3">
-      <p className="text-[10px] font-black uppercase tracking-widest text-[#8c7fc4]">{label}</p>
+      <p className="text-[10px] font-black uppercase tracking-widest text-[#8c7fc4]">
+        {label}
+      </p>
       <p className="mt-1 font-bold">{value}</p>
     </div>
   );
@@ -340,13 +369,18 @@ export default function PixelCrushApp() {
       <section className="mx-auto max-w-7xl px-6 py-10">
         <h2 className="text-center text-5xl font-black">Why PixelCrush Works</h2>
         <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {features.map(([Icon, title, desc]) => (
-            <div key={title} className="rounded-[2rem] bg-gradient-to-br from-[#ec7ed0] to-[#ff536f] p-6 shadow-xl">
-              <Icon className="h-8 w-8" />
-              <h3 className="mt-4 text-2xl font-black">{title}</h3>
-              <p className="mt-3 text-lg font-semibold leading-8 text-white/90">{desc}</p>
-            </div>
-          ))}
+{features.map(([Icon, title, desc], index) => (
+  <div
+    key={index}
+    className="rounded-[2rem] bg-gradient-to-br from-[#ec7ed0] to-[#ff536f] p-6 shadow-xl"
+  >
+    <Icon className="h-8 w-8" />
+    <h3 className="mt-4 text-2xl font-black">{title}</h3>
+    <p className="mt-3 text-lg font-semibold leading-8 text-white/90">
+      {desc}
+    </p>
+  </div>
+))}
         </div>
       </section>
 
