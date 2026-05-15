@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useMemo, useState } from "react";
-import { Heart, Lock, Headphones, Video, Users, Calendar, Search, Sparkles, CheckCircle2, UserRound, MessageCircleHeart } from "lucide-react";
+import { Heart, Lock, Headphones, Video, Users, Search, Sparkles, CheckCircle2, UserRound, MessageCircleHeart } from "lucide-react";
 import { motion } from "framer-motion";
 
 type feature = [React.ElementType, string, string];
@@ -171,15 +171,6 @@ const howItWorks = [
   ["5", "Close the Deal", "Archive your profile and start your relationship with ongoing support."],
 ];
 
-function PixelHeart({ rainbow = false }) {
-  return (
-    <div className="relative mx-auto h-14 w-16">
-      <div className="absolute left-2 top-0 h-8 w-8 rounded-sm bg-[#ff4658] shadow-[8px_0_0_#ff4658,16px_8px_0_#ff4658,0_8px_0_#ff4658,8px_16px_0_#ff4658]" />
-      {rainbow && <div className="absolute left-4 top-9 h-2 w-9 bg-yellow-300 shadow-[0_4px_0_#35d06f,0_8px_0_#2b87ff,0_12px_0_#8d56db]" />}
-    </div>
-  );
-}
-
 function CoupleCard({
   image,
 }: {
@@ -188,7 +179,7 @@ function CoupleCard({
   return (
     <motion.div
       whileHover={{ y: -5, scale: 1.02 }}
-      className="rounded-[2rem] border border-white/25 bg-white/15 p-5 shadow-xl backdrop-blur"
+      className="border border-white/25 bg-white/15 p-5 shadow-xl backdrop-blur"
     >
       <img
         src={image}
@@ -207,7 +198,7 @@ function Stat({
   value: string | number;
 }) {
   return (
-    <div className="rounded-3xl border border-white/20 bg-white/15 p-4 text-center shadow-lg backdrop-blur">
+    <div className="border border-white/20 bg-white/15 p-4 text-center shadow-lg backdrop-blur">
       <p className="text-3xl font-black text-white">{value}</p>
       <p className="mt-1 text-sm font-semibold text-white/80">{label}</p>
     </div>
@@ -220,31 +211,31 @@ function Badge({
   children: React.ReactNode;
 }) {
   return (
-    <span className="rounded-full bg-white/20 px-3 py-1 text-xs font-bold text-white ring-1 ring-white/20">
+    <span className="bg-white/20 px-3 py-1 text-xs font-bold text-white ring-1 ring-white/20">
       {children}
     </span>
   );
 }
-
 
 function ClientProfile({
   user,
 }: {
   user: (typeof users)[number];
 }) {
-const pref = preferences[user.id as keyof typeof preferences];
-const adv = advanced[user.id as keyof typeof advanced];
+  const pref = preferences[user.id as keyof typeof preferences];
+  const adv = advanced[user.id as keyof typeof advanced];
+
   return (
-    <div className="rounded-[2rem] bg-white p-5 text-[#30244d] shadow-2xl">
+    <div className="bg-white p-5 text-[#30244d] shadow-2xl">
       <div className="flex items-start justify-between gap-4">
         <div>
           <p className="text-xs font-black uppercase tracking-[0.24em] text-[#7766df]">private profile</p>
           <h3 className="mt-1 text-3xl font-black">{user.firstName}, {user.age}</h3>
           <p className="font-semibold text-[#6a5d83]">{user.occupation} · {user.location}</p>
         </div>
-        <div className="rounded-2xl bg-[#ff4658] px-4 py-2 text-sm font-black text-white">{user.relationshipStatus}</div>
+        <div className="bg-[#ff4658] px-4 py-2 text-sm font-black text-white">{user.relationshipStatus}</div>
       </div>
-      <p className="mt-4 rounded-2xl bg-[#f3efff] p-4 text-sm font-semibold leading-6">{pref.description}</p>
+      <p className="mt-4 bg-[#f3efff] p-4 text-sm font-semibold leading-6">{pref.description}</p>
       <div className="mt-4 grid grid-cols-2 gap-3 text-sm">
         <Info label="Goal" value={pref.goals} />
         <Info label="Looking For" value={pref.lookingFor} />
@@ -270,7 +261,7 @@ function Info({
   value: string;
 }) {
   return (
-    <div className="rounded-2xl bg-[#f7f4ff] p-3">
+    <div className="bg-[#f7f4ff] p-3">
       <p className="text-[10px] font-black uppercase tracking-widest text-[#8c7fc4]">
         {label}
       </p>
@@ -280,8 +271,6 @@ function Info({
 }
 
 export default function PixelCrushApp() {
-  
-  
   const [query, setQuery] = useState("");
   const [selectedId, setSelectedId] = useState("PC001");
 
@@ -296,7 +285,7 @@ export default function PixelCrushApp() {
       <nav className="sticky top-0 z-20 border-b border-white/10 bg-[#8191f5]/80 px-6 py-5 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="grid h-11 w-11 place-items-center rounded-2xl bg-[#ff4658] shadow-lg"><Heart fill="white" className="h-6 w-6" /></div>
+            <div className="grid h-11 w-11 place-items-center bg-[#ff4658] shadow-lg"><Heart fill="white" className="h-6 w-6" /></div>
             <h1 className="text-3xl font-black tracking-tight drop-shadow-md">pixelcrush</h1>
           </div>
           <div className="hidden gap-2 md:flex">
@@ -311,9 +300,9 @@ export default function PixelCrushApp() {
           <motion.h2 initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.05 }} className="mt-4 max-w-3xl text-6xl font-black leading-[0.95] drop-shadow-lg md:text-7xl">no swiping. no anxiety. just real connections.</motion.h2>
           <p className="mt-6 max-w-2xl text-xl font-semibold leading-9 text-white/85">your personal matchmaker handles everything from introductions to rejections. progressive intimacy, complete privacy, and hand-holding until you find your person.</p>
           <div className="mt-8 grid max-w-xl grid-cols-3 gap-4">
-            <div className="rounded-3xl border border-white/25 bg-white/15 p-5 text-center"><Heart fill="#ff4658" className="mx-auto h-12 w-12 text-[#ff4658]" /><p className="mt-2 font-black">Audio First</p></div>
-            <div className="rounded-3xl border border-white/25 bg-white/15 p-5 text-center"><Video className="mx-auto h-12 w-12" /><p className="mt-2 font-black">Then Video</p></div>
-            <div className="rounded-3xl border border-white/25 bg-white/15 p-5 text-center"><Users className="mx-auto h-12 w-12" /><p className="mt-2 font-black">Finally Meet</p></div>
+            <div className="border border-white/25 bg-white/15 p-5 text-center"><Heart fill="#ff4658" className="mx-auto h-12 w-12 text-[#ff4658]" /><p className="mt-2 font-black">Audio First</p></div>
+            <div className="border border-white/25 bg-white/15 p-5 text-center"><Video className="mx-auto h-12 w-12" /><p className="mt-2 font-black">Then Video</p></div>
+            <div className="border border-white/25 bg-white/15 p-5 text-center"><Users className="mx-auto h-12 w-12" /><p className="mt-2 font-black">Finally Meet</p></div>
           </div>
         </div>
         <div className="grid grid-cols-2 gap-4 lg:grid-cols-3">
@@ -343,15 +332,15 @@ export default function PixelCrushApp() {
       </section>
 
       <section className="mx-auto grid max-w-7xl gap-6 px-6 py-10 lg:grid-cols-[.9fr_1.1fr]">
-        <div className="rounded-[2rem] border border-white/20 bg-white/15 p-5 shadow-2xl backdrop-blur">
+        <div className="border border-white/20 bg-white/15 p-5 shadow-2xl backdrop-blur">
           <div className="flex items-center justify-between gap-4">
             <h2 className="text-3xl font-black">Matchmaker Dashboard</h2>
             <Search className="h-6 w-6 text-white/70" />
           </div>
-          <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="search clients..." className="mt-5 w-full rounded-2xl border border-white/20 bg-white/20 px-4 py-3 font-bold text-white placeholder:text-white/55 outline-none" />
+          <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="search clients..." className="mt-5 w-full border border-white/20 bg-white/20 px-4 py-3 font-bold text-white placeholder:text-white/55 outline-none" />
           <div className="mt-5 space-y-3">
             {filteredUsers.map((user) => (
-              <button key={user.id} onClick={() => setSelectedId(user.id)} className={`w-full rounded-3xl p-4 text-left transition ${selectedId === user.id ? "bg-[#ff4658] shadow-xl" : "bg-white/15 hover:bg-white/25"}`}>
+              <button key={user.id} onClick={() => setSelectedId(user.id)} className={`w-full p-4 text-left transition ${selectedId === user.id ? "bg-[#ff4658] shadow-xl" : "bg-white/15 hover:bg-white/25"}`}>
                 <div className="flex items-center justify-between gap-3">
                   <div>
                     <p className="text-xl font-black">{user.firstName}</p>
@@ -369,18 +358,18 @@ export default function PixelCrushApp() {
       <section className="mx-auto max-w-7xl px-6 py-10">
         <h2 className="text-center text-5xl font-black">Why PixelCrush Works</h2>
         <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-{features.map(([Icon, title, desc], index) => (
-  <div
-    key={index}
-    className="rounded-[2rem] bg-gradient-to-br from-[#ec7ed0] to-[#ff536f] p-6 shadow-xl"
-  >
-    <Icon className="h-8 w-8" />
-    <h3 className="mt-4 text-2xl font-black">{title}</h3>
-    <p className="mt-3 text-lg font-semibold leading-8 text-white/90">
-      {desc}
-    </p>
-  </div>
-))}
+          {features.map(([Icon, title, desc], index) => (
+            <div
+              key={index}
+              className="bg-gradient-to-br from-[#ec7ed0] to-[#ff536f] p-6 shadow-xl"
+            >
+              <Icon className="h-8 w-8" />
+              <h3 className="mt-4 text-2xl font-black">{title}</h3>
+              <p className="mt-3 text-lg font-semibold leading-8 text-white/90">
+                {desc}
+              </p>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -388,8 +377,8 @@ export default function PixelCrushApp() {
         <h2 className="text-center text-5xl font-black">How It Works</h2>
         <div className="mt-8 space-y-5">
           {howItWorks.map(([num, title, desc]) => (
-            <div key={num} className="rounded-[2rem] border border-white/20 bg-white/15 p-6 text-center shadow-xl backdrop-blur">
-              <div className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-[#ff4658] text-2xl font-black">{num}</div>
+            <div key={num} className="border border-white/20 bg-white/15 p-6 text-center shadow-xl backdrop-blur">
+              <div className="mx-auto grid h-16 w-16 place-items-center bg-[#ff4658] text-2xl font-black">{num}</div>
               <h3 className="mt-5 text-2xl font-black">{title}</h3>
               <p className="mx-auto mt-3 max-w-2xl text-lg font-semibold leading-8 text-white/85">{desc}</p>
             </div>
@@ -399,20 +388,20 @@ export default function PixelCrushApp() {
 
       <section className="mx-auto max-w-7xl px-6 py-10 pb-20">
         <div className="grid gap-5 lg:grid-cols-3">
-          <div className="rounded-[2rem] bg-white p-5 text-[#30244d] shadow-2xl">
+          <div className="bg-white p-5 text-[#30244d] shadow-2xl">
             <h3 className="text-2xl font-black">Current Match</h3>
             <p className="mt-2 font-bold text-[#6a5d83]">{matches[0].id} · {matches[0].status}</p>
-            <p className="mt-4 rounded-2xl bg-[#f3efff] p-4 font-semibold">{matches[0].notes}</p>
+            <p className="mt-4 bg-[#f3efff] p-4 font-semibold">{matches[0].notes}</p>
           </div>
-          <div className="rounded-[2rem] bg-white p-5 text-[#30244d] shadow-2xl">
+          <div className="bg-white p-5 text-[#30244d] shadow-2xl">
             <h3 className="text-2xl font-black">Next Session</h3>
             <p className="mt-2 font-bold text-[#6a5d83]">{sessions[0].type} · {sessions[0].duration}</p>
-            <p className="mt-4 rounded-2xl bg-[#f3efff] p-4 font-semibold">{sessions[0].nextAction}</p>
+            <p className="mt-4 bg-[#f3efff] p-4 font-semibold">{sessions[0].nextAction}</p>
           </div>
-          <div className="rounded-[2rem] bg-white p-5 text-[#30244d] shadow-2xl">
+          <div className="bg-white p-5 text-[#30244d] shadow-2xl">
             <h3 className="text-2xl font-black">matchmaker</h3>
             <p className="mt-2 font-bold text-[#6a5d83]">{matchmakers[0].name}</p>
-            <p className="mt-4 rounded-2xl bg-[#f3efff] p-4 font-semibold">{matchmakers[0].activeClients}/{matchmakers[0].capacity} clients · {matchmakers[0].successRate}% success</p>
+            <p className="mt-4 bg-[#f3efff] p-4 font-semibold">{matchmakers[0].activeClients}/{matchmakers[0].capacity} clients · {matchmakers[0].successRate}% success</p>
           </div>
         </div>
       </section>
