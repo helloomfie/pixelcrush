@@ -312,6 +312,8 @@ export default function PixelCrushApp() {
             "/images/couple5.png",
             "/images/couple6.png",
             "/images/couple7.png",
+            "/images/couple8.png",
+            "/images/couple9.png",
           ].map((image) => (
             <CoupleCard key={image} image={image} />
           ))}
