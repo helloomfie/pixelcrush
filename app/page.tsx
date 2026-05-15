@@ -212,7 +212,11 @@ function Stat({
   );
 }
 
-function Badge({ children }) {
+function Badge({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return <span className="rounded-full bg-white/20 px-3 py-1 text-xs font-bold text-white ring-1 ring-white/20">{children}</span>;
 }
 
