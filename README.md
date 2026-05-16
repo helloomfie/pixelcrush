@@ -36,23 +36,29 @@ instead of instant exposure and endless profile browsing.
 ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡
 
 architecture
+
+```txt
 frontend
 next.js app router
 react
 tailwindcss
 framer motion
+```
 data layer
+```txt
 local structured datasets
 spreadsheet ingestion
 future supabase migration
+```
 planned infrastructure
+```txt
 auth
 realtime messaging
 scheduling engine
 analytics
 profile state machines
 relationship lifecycle tracking
-
+```
 ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡
 
 current modules
@@ -91,16 +97,16 @@ http://localhost:3000
 ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡
 
 roadmap
-supabase migration
-relational database schema
-authentication layer
-calendar integrations
-automated scheduling
-operator analytics
-onboarding pipelines
-realtime messaging
-user portals
-compatibility scoring engine
+- supabase migration
+- relational database schema
+- authentication layer
+- calendar integrations
+- automated scheduling
+- operator analytics
+- onboarding pipelines
+- realtime messaging
+- user portals
+- compatibility scoring engine
 
 ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡
 
