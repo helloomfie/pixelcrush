@@ -37,23 +37,21 @@ instead of instant exposure and endless profile browsing.
 
 architecture
 frontend
-├── next.js app router
-├── react
-├── tailwindcss
-└── framer motion
-
+next.js app router
+react
+tailwindcss
+framer motion
 data layer
-├── local structured datasets
-├── spreadsheet ingestion
-└── future supabase migration
-
+local structured datasets
+spreadsheet ingestion
+future supabase migration
 planned infrastructure
-├── auth
-├── realtime messaging
-├── scheduling engine
-├── analytics
-├── profile state machines
-└── relationship lifecycle tracking
+auth
+realtime messaging
+scheduling engine
+analytics
+profile state machines
+relationship lifecycle tracking
 
 ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡
 
@@ -110,6 +108,16 @@ personality before appearance.
 privacy before performance.
 connection before algorithms.
 human guidance before automation.
+
+♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡
+
+usage
+
+this project is proprietary.
+
+viewing and inspiration are welcome, but reuse, redistribution, commercial deployment, or derivative products require direct permission.
+
+if this work resonates with you and you'd like to build together, reach out directly.
 
 ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡
 
