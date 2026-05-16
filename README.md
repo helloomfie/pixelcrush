@@ -56,6 +56,7 @@ relationship lifecycle tracking
 ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡
 
 current modules
+```txt
 matchmaking dashboard
 
 internal operator interface for managing clients, matches and progression states.
@@ -75,17 +76,18 @@ users unlock deeper interaction layers gradually instead of immediate exposure.
 relationship state tracking
 
 tracks progression from onboarding → active matching → sessions → relationship outcomes.
-
+```
 ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡
 
 development
+```txt
 npm install
 npm run dev
 
 local development server:
 
 http://localhost:3000
-
+```
 ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡
 
 roadmap
