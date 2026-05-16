@@ -101,14 +101,19 @@ export default function PixelCrushApp() {
             your personal matchmaker handles everything from introductions to rejections. progressive intimacy, complete privacy, and hand-holding until you find your person.
           </p>
 
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link href="/dashboard" className="bg-[#ff4658] px-6 py-4 text-sm font-black text-white shadow-xl">
-              open dashboard
-            </Link>
-            <a href="#how-it-works" className="border border-white/30 bg-white/15 px-6 py-4 text-sm font-black text-white shadow-xl backdrop-blur">
-              how it works
-            </a>
-          </div>
+        <div className="mt-8 flex flex-wrap gap-3">
+  <Link href="/quiz" className="bg-[#ff4658] px-6 py-4 text-sm font-black text-white shadow-xl">
+    take the compatibility quiz
+  </Link>
+
+  <Link href="/dashboard" className="border border-white/30 bg-white/15 px-6 py-4 text-sm font-black text-white shadow-xl backdrop-blur">
+    open dashboard
+  </Link>
+
+  <a href="#how-it-works" className="border border-white/30 bg-white/15 px-6 py-4 text-sm font-black text-white shadow-xl backdrop-blur">
+    how it works
+  </a>
+</div>
 
           <div className="mt-8 grid max-w-xl grid-cols-3 gap-4">
             <div className="border border-white/25 bg-white/15 p-5 text-center">
