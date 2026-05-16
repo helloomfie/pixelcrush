@@ -32,7 +32,7 @@ the platform is designed around guided progression:
 audio → video → in person
 
 instead of instant exposure and endless profile browsing.
-
+```
 ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡
 
 architecture
